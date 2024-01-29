@@ -1,38 +1,265 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --font-raleway: "Raleway", sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.app {
+  padding: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nav-bar{
+  background-color: black;
+  overflow: hidden;
+  
+}
+.nav-bar li{
+  float: left;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  list-style: none;
+  font-family: Georgia;
+}
+.nav-bar li:hover{
+  text-decoration: underline;
+}
+.nav-bar li:nth-of-type(2), .nav-bar li:nth-of-type(3), .nav-bar li:nth-of-type(4){
+  margin: 10px 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo{
+  margin-left: 30px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#display-images{
+  height: 600px;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-desc{
+  font-style: italic;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  text-align: left;
+  width: 50%;
+  color: #f2f2f2;
+  font-family: Georgia;
+}
+.movie-rating{
+  margin-left: 3rem;
+  color: #f2f2f2;
+  font-family: Georgia;
+}
+.movie-runtime{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f2f2f2;
+}
+.movie-title{
+  font-weight: 900;
+  font-size: 4rem;
+  margin-bottom: 0.4rem;
+  text-align: left;
+  color: #f2f2f2;
+  font-family: Georgia;
+}
+.image-info{
+  position: absolute;
+  padding: 5rem;
+  bottom: 0px;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+  background-image: linear-gradient(rgb(0,0,0,0), rgb(0,0,0,1));
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.image{
+  height: 600px;
+}
+
+.image > img{
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+.movie{
+  width: 200px;
+  height: 265px;
+  margin: 0.4rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.movie:hover{
+  transform: scale(1.05, 1.05);
+  filter: brightness(85%);
+  cursor: pointer;
+}
+.movie div{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.movie div img{
+  height: 80%;
+  width: 100%;
+}
+#list-title{
+  transform: translate(100px, 25px);
+  color: white;
+  font-family: Georgia;
+}
+.list{
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+}
+#card-img{
+  height: 260px;
+}
+.card-info{
+  position: absolute;
+  padding: 2.5rem 1rem 1rem 1rem;
+  bottom: 0px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  justify-content: flex-end;
+  font-size: 2px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0;
+}
+.card:hover .card-info{
+  visibility: visible;
+  opacity: 1;
+}
+.card-title{
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+  color: white;
+  font-family: Georgia;
+  font-size: 1rem;
+}
+.card-runtime{
+  font-size: .75rem;
+  margin-bottom: .75rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.card-rating{
+  color: white;
+  float: right;
+}
+.card-desc{
+  font-style: italic;
+  font-size: .75rem;
+  margin-bottom: 0.25rem;
+  color: white;
+  font-family: Georgia;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ #input {
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin: 25px 0 0 70px;
+  outline: none;
+  color: #a1a1a1;
+  background: #1f2123;
+  flex: 1;
+  width: 30%;
+  transform: translateY(-2px);
+}
+
+#search-icon {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  margin-left: 5px;
+
+}
+@media screen and (max-width: 1000px){
+    #input{
+      transform: translateY(-20px);
+      width: 40%;
+    }
+    #search-icon{
+      transform: translateY(-18px);
+    }
+    .image-info{
+      margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 4rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search {
+    padding: 1rem 1.75rem;
+    width: 100%;
   }
+
+   #input {
+    font-size: 1rem;
+    
+  }
+
+  #search-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .app {
+    padding: 4rem 1rem;
+  }
+
+  #input {
+    font-size: 1rem;
+  }
+
+  
 }
