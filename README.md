@@ -7,13 +7,13 @@ related to it; as well as viewing information about it along with trailers and m
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Technologies Used
--HTML
--CSS
--React.js
--React Router DOM
--React Responsive Carousel
--React Loading Skeleton
--React Youtube
+- HTML
+- CSS
+- React.js
+- React Router DOM
+- React Responsive Carousel
+- React Loading Skeleton
+- React Youtube
 ## Available Scripts
 
 In the project directory, you can run:
