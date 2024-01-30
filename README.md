@@ -64,5 +64,7 @@ in your projects.
 ### TMDB API Website
 -Where one can go to create an account and register for a free API KEY
 [https://www.themoviedb.org/](https://www.themoviedb.org/)
+
+
 ![Example](public/movie.jpg?raw=true)
     
