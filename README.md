@@ -1,5 +1,5 @@
 # Movie-Centric(Movie Hub App)
-Welcome to my movie App "Movie-Centric. A dynamic app that I created in React.js that is meant to be center for all movies
+Welcome to my movie App "Movie-Centric". A dynamic app that I created in React.js that is meant to be center for all movies
 new and old. Using the TMDB API you are able to explore and view information on all your favorite movies.
 From popular, to upcoming, even today's top-rated movies. What? your favorite movie is not in either of those categories?
 Well movie-centric has search capabilites that allow you to look up all your favorite movies in the TMDB database and the movies
